@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+min-height: 100vh;
+font-family: 'Poppins', sans-serif;
+background: linear-gradient(135deg, #ffe4ef, #fff0f5, #ffd6e7);
+color: #a83265;
+overflow-x: hidden;
+}
+
+.container {
+width: 92%;
+max-width: 500px;
+margin: 30px auto;
+padding: 30px 20px;
+text-align: center;
+background: rgba(255, 255, 255, 0.75);
+border: 2px solid white;
+border-radius: 30px;
+box-shadow: 0 15px 40px rgba(211, 76, 139, 0.18);
+position: relative;
+z-index: 1;
+}
+
+.top-tag {
+display: inline-block;
+background: #ffe0ed;
+padding: 8px 16px;
+border-radius: 30px;
+font-size: 10px;
+letter-spacing: 2px;
+margin-bottom: 20px;
+}
+
+.teddy {
+font-size: 65px;
+animation: bounce 2s infinite;
+}
+
+h1 {
+font-family: 'Pacifico', cursive;
+font-size: 32px;
+font-weight: normal;
+color: #d63384;
+margin-top: 12px;
+}
+
+.name {
+font-family: 'Pacifico', cursive;
+font-size: 43px;
+color: #ff69a6;
+margin: 5px 0 15px;
+animation: glow 2s infinite alternate;
+}
+
+.intro {
+font-size: 13px;
+line-height: 1.9;
+color: #92516d;
+}
+
+.cake {
+font-size: 75px;
+margin: 22px 0;
+animation: bounce 2s infinite;
+}
+
+button,
+.photo-button {
+display: inline-block;
+border: none;
+border-radius: 35px;
+background: linear-gradient(135deg, #ff77ad, #e84393);
+color: white;
+padding: 14px 23px;
+font-family: inherit;
+font-size: 13px;
+font-weight: 600;
+cursor: pointer;
+box-shadow: 0 8px 20px rgba(232, 67, 147, 0.25);
+transition: transform 0.3s;
+}
+
+button:active,
+.photo-button:active {
+transform: scale(0.95);
+}
+
+.hidden {
+display: none !important;
+}
+
+#surprise {
+margin-top: 30px;
+animation: appear 1s ease;
+}
+
+.divider {
+color: #ff77ad;
+font-size: 25px;
+margin-bottom: 20px;
+}
+
+.letter-title {
+font-family: 'Pacifico', cursive;
+font-weight: normal;
+font-size: 27px;
+margin-bottom: 18px;
+color: #d63384;
+}
+
+.letter {
+background: #fff2f7;
+border-radius: 20px;
+padding: 20px 16px;
+text-align: left;
+font-size: 12px;
+line-height: 2;
+color: #81435d;
+border: 1px dashed #ff9bc5;
+}
+
+.memory-title {
+font-family: 'Pacifico', cursive;
+font-size: 20px;
+font-weight: normal;
+margin: 30px 0 18px;
+color: #d63384;
+}
+
+.photo-frame {
+padding: 10px;
+background: white;
+border: 2px solid #ffb5d1;
+border-radius: 20px;
+min-height: 180px;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+box-shadow: 0 8px 25px rgba(232, 67, 147, 0.12);
+}
+
+#bestiePhoto {
+width: 100%;
+max-height: 350px;
+object-fit: contain;
+border-radius: 13px;
+}
+
+#photoPlaceholder {
+font-size: 17px;
+line-height: 2;
+padding: 20px 5px;
+color: #d63384;
+}
+
+#photoPlaceholder small {
+font-size: 10px;
+}
+
+.photo-button {
+margin: 15px 0 25px;
+}
+
+#wishBtn {
+display: block;
+margin: 10px auto 20px;
+}
+
+#finalWish {
+background: #fff0f6;
+border-radius: 20px;
+padding: 20px 12px;
+animation: appear 1s ease;
+}
+
+#finalWish h2 {
+font-family: 'Pacifico', cursive;
+font-size: 22px;
+font-weight: normal;
+margin-bottom: 10px;
+}
+
+#finalWish p {
+font-size: 12px;
+line-height: 1.8;
+}
+
+.big-heart {
+font-size: 55px;
+margin: 15px;
+animation: heartbeat 1s infinite;
+}
+
+.signature {
+font-weight: 600;
+color: #d63384;
+}
+
+footer {
+margin-top: 30px;
+font-size: 11px;
+color: #bb6c91;
+}
+
+.heart {
+position: fixed;
+bottom: -30px;
+pointer-events: none;
+animation: floatUp linear forwards;
+z-index: 0;
+}
+
+.confetti {
+position: fixed;
+top: -20px;
+z-index: 10;
+pointer-events: none;
+animation: fall 3s linear forwards;
+}
+
+@keyframes bounce {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+from { text-shadow: 0 0 5px #ffc1da; }
+to { text-shadow: 0 0 20px #ff8fba; }
+}
+
+@keyframes heartbeat {
+0%, 100% { transform: scale(1); }
+50% { transform: scale(1.15); }
+}
+
+@keyframes appear {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes floatUp {
+to {
+transform: translateY(-110vh) rotate(360deg);
+opacity: 0;
+}
+}
+
+@keyframes fall {
+to {
+transform: translateY(110vh) rotate(720deg);
+opacity: 0;
+}
+}
+
+@media (max-width: 360px) {
+h1 { font-size: 27px; }
+.name { font-size: 36px; }
+.container { padding: 25px 14px; }
+}
